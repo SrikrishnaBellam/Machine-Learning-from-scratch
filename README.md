@@ -9,11 +9,7 @@ Linear Regression models a continuous target as a **linear function** of the inp
 
 $\hat{y} = m x + b$
 
-It learns the parameters (m) (slope) and (b) (bias) by minimizing **Mean Squared Error (MSE)**:
-
-$
-\mathcal{L} = \frac{1}{N}\sum_{i=1}^{N}(\hat{y}_i - y_i)^2
-$
+It learns the parameters (m) (slope) and (b) (bias) by minimizing **Mean Squared Error (MSE)**
 
 Using batch gradient descent, the parameter updates are:
 
