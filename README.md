@@ -86,4 +86,57 @@ The accuracy metric is:
 
 $\text{Accuracy} = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}} \times 100$
 
+---
+---
+
+## K Nearest Neighbor
+
+### 🧮 1. Mathematical Formulation
+
+Given a training dataset
+$\mathcal{D} = {(x_i, y_i)}_{i=1}^{N}, \quad x_i \in \mathbb{R}^d, ; y_i \in \mathcal{Y}$
+
+and a new test point ($x'$), the KNN algorithm predicts the label of ($x'$) as follows:
+
+---
+
+### **Step 1: Compute distance**
+
+For every ($x_i$) in the dataset, compute its distance to the test sample ($x'$).
+
+Commonly we use **Euclidean distance**:
+$D(x', x_i) = \sqrt{\sum_{j=1}^{d} (x'*j - x*{ij})^2}$
+
+Other options: Manhattan ($(L_1)$), Minkowski, Cosine, etc.
+
+---
+
+### **Step 2: Sort and select neighbors**
+
+Find the **K smallest distances**, i.e., the **K closest points**:
+$\mathcal{N}_K(x') = \text{indices of } K \text{ smallest } D(x', x_i)$
+
+---
+
+### **Step 3: Voting / Averaging**
+
+* **For classification:**
+  $\hat{y} = \text{mode}({y_i : i \in \mathcal{N}_K(x')})$
+
+* **For regression:**
+  $\hat{y} = \frac{1}{K} \sum_{i \in \mathcal{N}_K(x')} y_i$
+
+---
+
+### **Step 4: Optional weighting by distance**
+
+Weighted voting can use:
+$w_i = \frac{1}{D(x', x_i) + \epsilon}$
+and then use weighted majority or weighted average.
+
+---
+
+
+
+
 
