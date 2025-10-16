@@ -11,7 +11,9 @@ $\hat{y} = m x + b$
 
 It learns the parameters (m) (slope) and (b) (bias) by minimizing **Mean Squared Error (MSE)**:
 
-$\mathcal{L}*\text{MSE} = \frac{1}{N}\sum*{i=1}^{N}(\hat{y}_i - y_i)^2$
+$
+\mathcal{L}*\text{MSE} = \frac{1}{N}\sum*{i=1}^{N}(\hat{y}_i - y_i)^2
+$
 
 Using batch gradient descent, the parameter updates are:
 
