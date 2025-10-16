@@ -70,11 +70,13 @@ $b := b - \alpha \frac{\partial J}{\partial b}$
 
 For classification:  
 
-$\hat{y}^{(i)} =
+$$
+\hat{y}^{(i)} =
 \begin{cases}
 1 & \text{if } \sigma(z^{(i)}) \geq 0.5 \\
 0 & \text{if } \sigma(z^{(i)}) < 0.5
-\end{cases}$
+\end{cases}
+$$
 
 ---
 
