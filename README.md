@@ -25,14 +25,10 @@ This repo implements a minimal training loop with `forward → loss → backprop
 ### 1. Hypothesis (Forward Propagation)
 
 Given input features  
-$
-X \in \mathbb{R}^{m \times n}, \quad y \in \{0,1\}^m
-$
+$X \in \mathbb{R}^{m \times n}, \quad y \in \{0,1\}^m$
 
 Weights and bias:  
-$
-w \in \mathbb{R}^{n \times 1}, \quad b \in \mathbb{R}
-$
+$w \in \mathbb{R}^{n \times 1}, \quad b \in \mathbb{R}$
 
 Linear combination:  
 $
