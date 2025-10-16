@@ -31,14 +31,10 @@ Weights and bias:
 $w \in \mathbb{R}^{n \times 1}, \quad b \in \mathbb{R}$
 
 Linear combination:  
-$
-z^{(i)} = w^\top x^{(i)} + b
-$
+$z^{(i)} = w^\top x^{(i)} + b$
 
 Sigmoid activation:  
-$
-\hat{y}^{(i)} = \sigma(z^{(i)}) = \frac{1}{1 + e^{-z^{(i)}}}
-$
+$\hat{y}^{(i)} = \sigma(z^{(i)}) = \frac{1}{1 + e^{-z^{(i)}}}$
 
 ---
 
@@ -46,9 +42,7 @@ $
 
 For $m$ training samples, the loss is:  
 
-$
-J(w, b) = -\frac{1}{m} \sum_{i=1}^m \Big[ y^{(i)} \log(\hat{y}^{(i)}) + (1-y^{(i)}) \log(1-\hat{y}^{(i)}) \Big]
-$
+$J(w, b) = -\frac{1}{m} \sum_{i=1}^m \Big[ y^{(i)} \log(\hat{y}^{(i)}) + (1-y^{(i)}) \log(1-\hat{y}^{(i)}) \Big]$
 
 ---
 
@@ -56,13 +50,9 @@ $
 
 The partial derivatives are:  
 
-$
-\frac{\partial J}{\partial w} = \frac{1}{m} \sum_{i=1}^m \big( \hat{y}^{(i)} - y^{(i)} \big) x^{(i)}
-$
+$\frac{\partial J}{\partial w} = \frac{1}{m} \sum_{i=1}^m \big( \hat{y}^{(i)} - y^{(i)} \big) x^{(i)}$
 
-$
-\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m \big( \hat{y}^{(i)} - y^{(i)} \big)
-$
+$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m \big( \hat{y}^{(i)} - y^{(i)} \big)$
 
 ---
 
@@ -70,13 +60,9 @@ $
 
 Using learning rate \( \alpha \):  
 
-$
-w := w - \alpha \frac{\partial J}{\partial w}
-$
+$w := w - \alpha \frac{\partial J}{\partial w}$
 
-$
-b := b - \alpha \frac{\partial J}{\partial b}
-$
+$b := b - \alpha \frac{\partial J}{\partial b}$
 
 ---
 
@@ -84,13 +70,11 @@ $
 
 For classification:  
 
-$
-\hat{y}^{(i)} =
+$\hat{y}^{(i)} =
 \begin{cases}
 1 & \text{if } \sigma(z^{(i)}) \geq 0.5 \\
 0 & \text{if } \sigma(z^{(i)}) < 0.5
-\end{cases}
-$
+\end{cases}$
 
 ---
 
@@ -98,8 +82,6 @@ $
 
 The accuracy metric is:  
 
-$
-\text{Accuracy} = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}} \times 100
-$
+$\text{Accuracy} = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}} \times 100$
 
 
