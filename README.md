@@ -136,6 +136,55 @@ and then use weighted majority or weighted average.
 
 ---
 
+## KMeans
+
+### 🧮 1. Mathematical Formulation
+
+Given ( $n$ ) data points
+$X = {x_1, x_2, \dots, x_n}, \quad x_i \in \mathbb{R}^d$
+and a desired number of clusters ($K$),
+
+the goal is to partition the data into ( $K$ ) clusters ( $C_1, C_2, \dots, C_K$ )
+so that the **within-cluster variance** is minimized.
+
+---
+
+### **Objective Function**
+
+$J = \sum_{k=1}^{K} \sum_{x_i \in C_k} |x_i - \mu_k|^2$
+
+where ( $\mu_k$ ) is the centroid (mean) of cluster ( $C_k$ ):
+$\mu_k = \frac{1}{|C_k|} \sum_{x_i \in C_k} x_i$
+
+---
+
+### **Optimization Process (Iterative Refinement)**
+
+1. **Initialize centroids** randomly:
+   $\mu_1, \mu_2, \dots, \mu_K$
+
+2. **Assign step:**
+   Assign each point to its closest centroid:
+
+   $c_i = \arg\min_{k} |x_i - \mu_k|^2$
+
+3. **Update step:**
+   Recompute each centroid as the mean of its assigned points:
+
+   $\mu_k = \frac{1}{|C_k|} \sum_{x_i \in C_k} x_i$
+
+4. **Repeat** until convergence (centroids stop changing or a max iteration limit is reached).
+
+---
+
+### **Stopping Criterion**
+
+$\text{Stop when } |\mu^{(t)}_k - \mu^{(t-1)}_k| < \epsilon \quad \forall k$
+
+---
+
+
+
 
 
 
