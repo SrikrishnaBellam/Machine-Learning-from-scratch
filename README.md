@@ -105,9 +105,11 @@ and a new test point ($x'$), the KNN algorithm predicts the label of ($x'$) as f
 For every ($x_i$) in the dataset, compute its distance to the test sample ($x'$).
 
 Commonly we use **Euclidean distance**:
-$D(x', x_i) = \sqrt{\sum_{j=1}^{d} (x'*j - x*{ij})^2}$
+$$
+D(x', x_i) = \sqrt{\sum_{j=1}^{d} (x'*j - x*{ij})^2}
+$$
 
-Other options: Manhattan ($(L_1)$), Minkowski, Cosine, etc.
+Other options: Manhattan ($L_1$), Minkowski, Cosine, etc.
 
 ---
 
@@ -141,9 +143,7 @@ and then use weighted majority or weighted average.
 ### 🧮 1. Mathematical Formulation
 
 Given ( $n$ ) data points
-$$
-X = {x_1, x_2, \dots, x_n}, \quad x_i \in \mathbb{R}^d
-$$
+$X = {x_1, x_2, \dots, x_n}, \quad x_i \in \mathbb{R}^d$
 and a desired number of clusters ($K$),
 
 the goal is to partition the data into ( $K$ ) clusters ( $C_1, C_2, \dots, C_K$ )
