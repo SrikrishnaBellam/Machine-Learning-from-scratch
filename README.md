@@ -141,7 +141,9 @@ and then use weighted majority or weighted average.
 ### 🧮 1. Mathematical Formulation
 
 Given ( $n$ ) data points
-$X = {x_1, x_2, \dots, x_n}, \quad x_i \in \mathbb{R}^d$
+$$
+X = {x_1, x_2, \dots, x_n}, \quad x_i \in \mathbb{R}^d
+$$
 and a desired number of clusters ($K$),
 
 the goal is to partition the data into ( $K$ ) clusters ( $C_1, C_2, \dots, C_K$ )
